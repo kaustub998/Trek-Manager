@@ -4,8 +4,9 @@ import img_logo from "../Images/trekker logo.png"
 import cancel from "../Images/cancel.png"
 import search from "../Images/Search.png"
 import menu from "../Images/Menu.png"
+import {suggestions} from "../search_suggestions"
 import {
-    Link
+    Link, Navigate, useNavigate
 } from "react-router-dom";
 import { useEffect } from "react"
 
@@ -27,19 +28,11 @@ export const Navbar = () => {
             {
                 settoggle_dropdown(false);
             }
-            else
-            {
-                if(event.target.tagName==="LI")
-                {
-                    setsearch_value(event.target.innerText);
-                }
-            }
-        }
-
-      document.addEventListener("mousedown", handler);
-      return (() => {document.removeEventListener("mousedown", handler)})
+        }  
+         document.addEventListener("mousedown", handler);
+         return (() => {document.removeEventListener("mousedown", handler)})
     });
-    
+
     const [toggle_menu, settoggle_menu] = useState(false);
 
     let open_menu = () => {
@@ -47,6 +40,45 @@ export const Navbar = () => {
     };
 
     const [search_value, setsearch_value] = useState("");
+    
+    let search_onchange = (event)=>{
+        settoggle_dropdown(true);
+        let userdata=event.target.value;
+        setsearch_value(userdata);
+        let emptyarray= [];
+
+        if (userdata){
+            emptyarray=suggestions.filter(
+                (data)=>{return data.toLocaleLowerCase().startsWith(userdata.toLocaleLowerCase());}
+            );
+            emptyarray=emptyarray.map((data)=>{return data = '<li>'+data+'</li>'});
+        }
+        showsuggestions(emptyarray,userdata);
+    };
+
+    let showsuggestions = (list) => {
+        let search_bar = document.querySelector(".navbar_searchBar");
+        let search_dropdown = search_bar.querySelector(".search_dropdown");
+        let search_list = search_dropdown.querySelector(".search_list");
+        if(!list.length){
+        }
+        else{list= list.join('');}
+        
+        search_list.innerHTML = list;
+
+        let list_items=search_list.querySelectorAll("li");
+        for (let i=0;i< list_items.length;i++) {
+            list_items[i].addEventListener("click",() => {select(list_items[i])});
+        }
+    };
+
+    let navigate = useNavigate();
+
+    let select = (element) => {
+        setsearch_value(element.innerText);
+        navigate(`/TrekDescription${element.innerText}`);
+        settoggle_dropdown(false);
+    };
 
   return (
     <div className='navbar_container'>
@@ -59,12 +91,9 @@ export const Navbar = () => {
         </div>
         <div className="navbar_searchBar" ref={menuRef}>
             <img src={search} alt="Search_icon" className="navbar_search_icon" />
-            <input className="navbar_search_text" type="text" placeholder='Search for destinations' onClick={search_dropdown} value={search_value} onChange={(event)=>{setsearch_value(event.target.value)}}/>
+            <input className="navbar_search_text" type="text" placeholder='Search for destinations' onClick={search_dropdown} value={search_value} onChange={search_onchange}/>
             <div className={toggle_dropdown ? "search_dropdown search_dropdown_active":"search_dropdown search_dropdown_inactive" }>
-                <ul>
-                    <li>Recommendations</li>
-                    <li>kaustub</li>
-                </ul>
+                <ul className='search_list'></ul>
             </div> 
         </div>
         <ul className="navbar_wrapper">
