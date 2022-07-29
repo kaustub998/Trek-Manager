@@ -8,16 +8,14 @@
 .HeroSection{
     background-image: url("../Images/hero_image.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 65vh;
+    background-size:100% 90%;
+    height: 60vh;
     opacity: 0.8;
-    background-size:100% 100%;
-    
 }
 
 .center_text_trek{
     position: absolute;
-    top:25%;
+    top:20%;
     left:25%;
     font-size: 140px;
     font-family: 'Nunito';
@@ -33,7 +31,7 @@
 
 .center_text_manager{
     position: absolute;
-    top:45%;
+    top:40%;
     left:35%;
     font-size: 140px;
     font-family: 'Nunito';
@@ -48,7 +46,7 @@
 }
 
 .lets_roam{
-   height:70vh;
+   height:80vh;
    display: flex;
    flex-direction: row-reverse;
    align-items: flex-end;
@@ -64,6 +62,7 @@
 
     color: var(--text-colour);
     justify-self: flex-end;
+    align-self: flex-end;
 }
 
 .lets_roam_picture{

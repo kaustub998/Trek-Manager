@@ -6,7 +6,7 @@ import search from "../Images/Search.png"
 import menu from "../Images/Menu.png"
 import {suggestions} from "../search_suggestions"
 import {
-    Link, Navigate, useNavigate
+    Link, useNavigate
 } from "react-router-dom";
 import { useEffect } from "react"
 
@@ -53,7 +53,7 @@ export const Navbar = () => {
             );
             emptyarray=emptyarray.map((data)=>{return data = '<li>'+data+'</li>'});
         }
-        showsuggestions(emptyarray,userdata);
+        showsuggestions(emptyarray);
     };
 
     let showsuggestions = (list) => {
@@ -61,6 +61,7 @@ export const Navbar = () => {
         let search_dropdown = search_bar.querySelector(".search_dropdown");
         let search_list = search_dropdown.querySelector(".search_list");
         if(!list.length){
+
         }
         else{list= list.join('');}
         
