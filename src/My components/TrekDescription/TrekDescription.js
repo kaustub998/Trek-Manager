@@ -6,7 +6,7 @@ export const TrekDescription = () => {
   const params = useParams();
 
   let desc = {
-    
+
     destination: {
       title: "Annapurna Base Camp",
       description: "Annapurna Base Camp Trek probably the best legendary and classical treks in the world offers breathe stopping Mountain View, give opportunity to experience the typical Nepali village, local people and their way of living traditional life in Himalaya of Nepal. The Annapurna Base Camp route goes passing through spectacular and tranquil landscapes, charming Gurung and Magar villages, lush green Rhododendron, bamboo and alpine forests to the trip’s last and final destination, Annapurna Base Camp at the height of 4130m (13546ft.)",
@@ -119,13 +119,13 @@ export const TrekDescription = () => {
 };
 
 let user_input = params.title.toLocaleLowerCase().split("");
-let searched_desc = desc.title.toLocaleLowerCase().split("");
+let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
 
   return (
     <>
     {user_input[0]===searched_desc[0]?
     <div>
-    <img src={desc.pic} alt="" />
+    <img src={desc.destination.pic} alt="" />
     <p className='text_area'>
     </p> 
     </div>
