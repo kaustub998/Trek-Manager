@@ -9,8 +9,9 @@ export const TrekDescription = () => {
 
     destination: {
       title: "Annapurna Base Camp",
-      description: "Annapurna Base Camp Trek probably the best legendary and classical treks in the world offers breathe stopping Mountain View, give opportunity to experience the typical Nepali village, local people and their way of living traditional life in Himalaya of Nepal. The Annapurna Base Camp route goes passing through spectacular and tranquil landscapes, charming Gurung and Magar villages, lush green Rhododendron, bamboo and alpine forests to the trip’s last and final destination, Annapurna Base Camp at the height of 4130m (13546ft.)",
-      pic: "https://excitingnepal.com/wp-content/uploads/2019/06/annapurna-base-camp-trek-map.jpg"
+      description: "Annapurna Base Camp Trek probably the best legendary and classical treks in the world offers breathe stopping Mountain View, give opportunity to experience the typical Nepali village, local people and their way of living traditional life in Himalaya of Nepal. The Annapurna Base Camp route goes passing through spectacular and tranquil landscapes, charming Gurung and Magar villages, lush green Rhododendron, bamboo and alpine forests.Mt. Annapurna (8091m) of Nepal is the 10th highest mountain in the world and the journey to its base camp, which is at 4130m/13549ft height, is one of the most popular walks on earth. Moreover, we reach our destination via Mt. Machapuchhre (Fishtail) which is revered by the Nepalese for its unique beauty. Furthermore, thanks to the well-groomed itinerary of the Annapurna Base Camp trekking package, it is a popular choice among diverse outdoor enthusiasts, from a solo female traveler to hikers traveling in groups to Nepal.",
+      pic1: "https://excitingnepal.com/wp-content/uploads/2019/06/annapurna-base-camp-trek-map.jpg",
+      pic2: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/cover-for-Annapurna-Base-Camp-Trek.jpg"
     }, 
 
     route:[
@@ -122,15 +123,18 @@ let user_input = params.title.toLocaleLowerCase().split("");
 let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
 
   return (
-    <>
-    {user_input[0]===searched_desc[0]?
-    <div>
-    <img src={desc.destination.pic} alt="" />
-    <p className='text_area'>
-    </p> 
+    <div className="trekdescription">
+        {user_input[0]===searched_desc[0]?
+        <div>
+        <div className="description_title">{desc.destination.title}</div>
+        <div className='description_flex'>
+          <div className="description_text">{desc.destination.description}</div>
+          <div className="description_pic"><img src={desc.destination.pic2} alt="" id='desc_carousel_pic'/></div> 
+        </div> 
+
+        </div>
+
+      :<div>error</div>}
     </div>
-  :<div>error</div>}
-    
-    </>
   )
 }

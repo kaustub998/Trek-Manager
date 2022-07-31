@@ -1,0 +1,41 @@
+.trekdescription{
+    background-color: var(--background-colour);
+}
+
+.description_title {
+    font-size: 4em;
+    padding: 3rem 2rem;
+    color: var(--title-colour);
+}
+
+.description_flex{
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: center;
+    flex-basis: 0 0 50%;
+    padding-bottom: 4rem;
+}
+
+.description_pic{
+    width: 100%;
+    flex-basis: 0 0 50%;
+    align-self: center;
+}
+
+.description_text{
+    padding-right: 2rem;
+    font-size: 1.3em;
+    line-height: 1.6rem;
+
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 400;
+    text-align: justify;
+    color: var(--text-colour);
+}
+
+#desc_carousel_pic{
+    position: relative;
+    width: 100%;
+    border-radius: 3rem;
+}

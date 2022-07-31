@@ -4,7 +4,7 @@ import img_logo from "../Images/trekker logo.png"
 import cancel from "../Images/cancel.png"
 import search from "../Images/Search.png"
 import menu from "../Images/Menu.png"
-import {suggestions} from "../search_suggestions"
+import {suggestions} from "./search_suggestions"
 import {
     Link, useNavigate
 } from "react-router-dom";
