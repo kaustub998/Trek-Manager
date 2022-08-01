@@ -103,7 +103,7 @@ export const TrekDescription = () => {
     transport:{
       destination_city: "Ghandruk",
       origin_city:["kathmandu"],
-      medium:["VIA Car cost:10000","VIA Bus Cost:2000"]
+      medium:["VIA Car Cost:10000","VIA Bus Cost:2000"]
     }
   };
 
