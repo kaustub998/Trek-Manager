@@ -100,21 +100,13 @@ export const TrekDescription = () => {
 
     season:["September","October"],
 
-    transport:[
-      {
-        destination_city: "Ghandruk",
-        transport_medium:"car",
-        origin_city:["kathmandu","pokhara"],
-        cost:["10000","1000"]
-      },
-      {
-        destination_city: "Ghandruk",
-        transport_medium:"bus",
-        origin_city:["kathmandu","pokhara"],
-        cost:["10000","1000"]
-      }
-    ]
-};
+    transport:{
+      destination_city: "Ghandruk",
+      origin_city:["kathmandu"],
+      medium:["VIA Car cost:10000","VIA Bus Cost:2000"]
+    }
+  };
+
 
 let user_input = params.title.toLocaleLowerCase().split("");
 let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
@@ -140,9 +132,7 @@ let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
         <div className="transport_frame ">
           <div id='transport_header'>Transportation</div>
           <div>
-            {desc.transport.map((details)=>{
-            return <Transport medium_desc={details}/>
-          })}
+            {<Transport medium_desc={desc.transport}/>}
           </div>
           
         </div>
