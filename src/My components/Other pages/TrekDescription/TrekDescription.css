@@ -13,7 +13,7 @@
     padding: 1rem 2rem;
     justify-content: center;
     flex-basis: 0 0 50%;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .description_pic{
@@ -38,4 +38,13 @@
     position: relative;
     width: 100%;
     border-radius: 3rem;
+}
+
+.route_frame{
+    padding: 2rem;
+}
+
+#routes{
+    font-size: 3em;
+    color: var(--title-colour);
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import "./TrekDescription.css"
+import {Route} from "./Route"
 
 export const TrekDescription = () => {
   const params = useParams();
@@ -9,68 +10,125 @@ export const TrekDescription = () => {
 
     destination: {
       title: "Annapurna Base Camp",
-      description: "Annapurna Base Camp Trek probably the best legendary and classical treks in the world offers breathe stopping Mountain View, give opportunity to experience the typical Nepali village, local people and their way of living traditional life in Himalaya of Nepal. The Annapurna Base Camp route goes passing through spectacular and tranquil landscapes, charming Gurung and Magar villages, lush green Rhododendron, bamboo and alpine forests.Mt. Annapurna (8091m) of Nepal is the 10th highest mountain in the world and the journey to its base camp, which is at 4130m/13549ft height, is one of the most popular walks on earth. Moreover, we reach our destination via Mt. Machapuchhre (Fishtail) which is revered by the Nepalese for its unique beauty. Furthermore, thanks to the well-groomed itinerary of the Annapurna Base Camp trekking package, it is a popular choice among diverse outdoor enthusiasts, from a solo female traveler to hikers traveling in groups to Nepal.",
-      pic1: "https://excitingnepal.com/wp-content/uploads/2019/06/annapurna-base-camp-trek-map.jpg",
-      pic2: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/cover-for-Annapurna-Base-Camp-Trek.jpg"
+      description: `Annapurna Base Camp Trek probably the best legendary and classical treks in the world offers breathe stopping Mountain View, give opportunity to experience the typical Nepali village, local people and their way of living traditional life in Himalaya of Nepal. The Annapurna Base Camp route goes passing through spectacular and tranquil landscapes, charming Gurung and Magar villages, lush green Rhododendron, bamboo and alpine forests.Mt. Annapurna (8091m) of Nepal is the 10th highest mountain in the world and the journey to its base camp, which is at 4130m/13549ft height, is one of the most popular walks on earth. Moreover, we reach our destination via Mt. Machapuchhre (Fishtail) which is revered by the Nepalese for its unique beauty. Furthermore, thanks to the well-groomed itinerary of the Annapurna Base Camp trekking package, it is a popular choice among diverse outdoor enthusiasts, from a solo female traveler to hikers traveling in groups to Nepal.`,
+      pic: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/cover-for-Annapurna-Base-Camp-Trek.jpg"
     }, 
 
     route:[
-      {
-        city:[
+    {
+      route_name:"Route 1",
+      route_desc:"Trekking to Annapurana Base Camp is offered by several agencies in Pokhara as an all inclusive package with a guide and porters. It is also popular to do this trek by hiring your own staff, guides and porters are easy to find in Pokhara and this way is cheaper than a package trek. Trekking completely independent is the cheapest way to get to Annapurana Base Camp and if you can carry your own backpack the route is well marked and easy to follow.",
+      city:[
+        {
+          city_name:"Ghandruk",
+          city_desc:"Ghandruk is a common place for treks in the Annapurna range of Nepal (Annapurna Base camp and Annapurna Circuit treks, in particular). The peaks of Mt Annapurna, Mt Machapuchare, Gangapurna and Mt Hiunchuli can be seen from the village, and it is also the gateway to the Poon hill.",
+          city_pic:"https://tibetanencounter.com/wp-content/uploads/2017/10/ghandruk-trek1.jpg",
+          city_viewpoint:[
           {
-            city_name:"Ghandruk",
-            City_viewpoint:[
-              {
-                cvp_name:"",
-                cvp_details:""
-              },
-              {
-                cvp_name:"",
-                cvp_details:""
-              }
-            ],
-            accomodation:[
-              {
-                hotel_name:"",
-                phone_number:"",
-                email:""
-              },
-              {
-                hotel_name:"",
-                phone_number:"",
-                email:""
-              }
-            ]
+            cvp_name:"viewpoint",
+            cvp_details:"can see sun"
           },
           {
-            city_name:"Chhomrong",
-            City_viewpoint:[
-              {
-                cvp_name:"",
-                cvp_details:""
-              },
-              {
-                cvp_name:"",
-                cvp_details:""
-              }
-            ],
-            accomodation:[
-              {
-                hotel_name:"",
-                phone_number:"",
-                email:""
-              },
-              {
-                hotel_name:"",
-                phone_number:"",
-                email:""
-              }
-            ]
-          }
-        ],
-      },
-    ],
+            cvp_name:"culture",
+            cvp_details:"can experience the culture of ghandruk"
+          }],
+
+          accomodation:
+          [{
+            hotel_name:"ghandruk hotel",
+            phone_number:"",
+            email:""},
+          {
+            hotel_name:"hotel de ghnadruk",
+            phone_number:"",
+            email:""
+          }]
+
+        },
+        {
+          city_name:"Chhomrong",
+          city_desc:"Ghandruk is a common place for treks in the Annapurna range of Nepal (Annapurna Base camp and Annapurna Circuit treks, in particular). The peaks of Mt Annapurna, Mt Machapuchare, Gangapurna and Mt Hiunchuli can be seen from the village, and it is also the gateway to the Poon hill.",
+          city_pic:"https://tibetanencounter.com/wp-content/uploads/2017/10/ghandruk-trek1.jpg",
+          
+          City_viewpoint:
+          [{
+            cvp_name:"",
+            cvp_details:""
+          },
+          {
+            cvp_name:"",
+            cvp_details:""
+          }],
+
+        accomodation:[
+          {
+            hotel_name:"",
+            phone_number:"",
+            email:""
+          },
+          {
+            hotel_name:"",
+            phone_number:"",
+            email:""
+          }]
+        }]
+    },
+    {
+      route_name:"Route 2",
+      city:[
+        {
+          city_name:"Ghandruk",
+
+          City_viewpoint:
+          [{
+            cvp_name:"",
+            cvp_details:""},
+          {
+            cvp_name:"",
+            cvp_details:""
+          }],
+
+          accomodation:
+          [{
+            hotel_name:"",
+            phone_number:"",
+            email:""},
+          {
+            hotel_name:"",
+            phone_number:"",
+            email:""
+          }]
+
+        },
+        {
+          city_name:"Chhomrong",
+
+          City_viewpoint:
+          [{
+            cvp_name:"",
+            cvp_details:""
+          },
+          {
+            cvp_name:"",
+            cvp_details:""
+          }],
+
+        accomodation:[
+          {
+            hotel_name:"",
+            phone_number:"",
+            email:""
+          },
+          {
+            hotel_name:"",
+            phone_number:"",
+            email:""
+          }]
+        }]
+    }],
+
     season:["September","October"],
+
     Guides:[
       {
         guide_name:"aashish pant",
@@ -103,6 +161,7 @@ export const TrekDescription = () => {
       ]
       }
     ],
+
     transport:[
       {
         transport_medium:"car",
@@ -125,15 +184,22 @@ let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
   return (
     <div className="trekdescription">
         {user_input[0]===searched_desc[0]?
+        <>
         <div>
-        <div className="description_title">{desc.destination.title}</div>
-        <div className='description_flex'>
-          <div className="description_text">{desc.destination.description}</div>
-          <div className="description_pic"><img src={desc.destination.pic2} alt="" id='desc_carousel_pic'/></div> 
-        </div> 
-
+          <div className="description_title">{desc.destination.title}</div>
+          <div className='description_flex'>
+            <div className="description_text">{desc.destination.description}</div>
+            <div className="description_pic"><img src={desc.destination.pic} alt="abc" id='desc_carousel_pic'/></div> 
+          </div> 
         </div>
-
+        <div className="route_frame">
+          <div id="routes">Routes</div>
+          {/* {desc.route.map((route_number)=> {
+            return <Route route_details={route_number}/>
+          })} */
+          console.log(JSON.stringify(desc))}
+        </div>
+        </>
       :<div>error</div>}
     </div>
   )
