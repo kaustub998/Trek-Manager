@@ -22,7 +22,7 @@ export const TrekDescription = () => {
       route_pic:"https://tibetanencounter.com/wp-content/uploads/2017/10/ghandruk-trek1.jpg",
       packages:[
         {
-          package_name: "economy",
+          package_name: "Economy",
           package_cost:"8000",
           package_details:[
             "Day 1: Pokhara to Jhinu Danda via Nayapul (Trekking: approximately 4 hours)",
@@ -100,19 +100,20 @@ export const TrekDescription = () => {
 
     season:["September","October"],
 
-    transport:{
-      destination_city: "Ghandruk",
-      medium: [{
+    transport:[
+      {
+        destination_city: "Ghandruk",
         transport_medium:"car",
         origin_city:["kathmandu","pokhara"],
         cost:["10000","1000"]
       },
       {
+        destination_city: "Ghandruk",
         transport_medium:"bus",
         origin_city:["kathmandu","pokhara"],
         cost:["10000","1000"]
-      }]
-    }
+      }
+    ]
 };
 
 let user_input = params.title.toLocaleLowerCase().split("");
@@ -136,21 +137,23 @@ let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
           })}
         </div>
         
+        <div className="transport_frame ">
+          <div id='transport_header'>Transportation</div>
+          <div>
+            {desc.transport.map((details)=>{
+            return <Transport medium_desc={details}/>
+          })}
+          </div>
+          
+        </div>
+
         <div className="season_frame">
         <span id="season">Favourable Seasons:</span>
           <span>{desc.season.map((s)=>{
             return (<span id='season_name'>{s}</span>)
           })}</span>
         </div>
-        <div className="transport_frame">
-          <div>{desc.transport.destination_city}</div>
-          <div>
-            {desc.transport.medium.map((details)=>{
-            return <Transport medium_desc={details}/>
-          })}
-          </div>
-          
-        </div>
+
         </>
       :<div>error</div>}
     </div>
