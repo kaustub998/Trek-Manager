@@ -100,11 +100,16 @@ export const TrekDescription = () => {
 
     season:["September","October"],
 
-    transport:{
+    transport:[{
       destination_city: "Ghandruk",
       origin_city:["kathmandu"],
       medium:["VIA Car Cost:10000","VIA Bus Cost:2000"]
-    }
+    },
+    {
+      destination_city: "Ghandruk",
+      origin_city:["pokhara"],
+      medium:["VIA Car Cost:3000","VIA Bus Cost:1000"]
+    },]
   };
 
 
@@ -132,7 +137,9 @@ let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
         <div className="transport_frame ">
           <div id='transport_header'>Transportation</div>
           <div>
-            {<Transport medium_desc={desc.transport}/>}
+            {desc.transport.map((p)=>{
+              return <Transport medium_desc={p}/>
+            })}
           </div>
           
         </div>
