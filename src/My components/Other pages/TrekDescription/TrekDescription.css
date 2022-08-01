@@ -3,9 +3,12 @@
 }
 
 .description_title {
-    font-size: 4em;
+    font-size: 4.5em;
     padding: 3rem 2rem;
     color: var(--title-colour);
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
 }
 
 .description_flex{
@@ -45,6 +48,27 @@
 }
 
 #routes{
-    font-size: 3em;
+    font-size: 3.5em;
     color: var(--title-colour);
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+}
+
+#season_name{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: var(--text-colour);
+    padding-right: 1em;
+}
+
+#season{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3em;
+    color: var(--text-colour);
+    padding: 0rem 2rem;
 }
