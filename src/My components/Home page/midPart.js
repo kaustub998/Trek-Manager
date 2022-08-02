@@ -11,13 +11,11 @@ export const MidPart = () => {
       title: "Annapurna Base Camp",
       image: ABCpic ,
       desc:"From ancient kingdoms to majestic mountain vistas, trek through the breathtaking Himalayan landscape of the Annapurna Ranges. Pass awe-inspiring glaciers, stay on the banks of pristine rivers, cross mountain pastures, dip into natural hot springs and encounter mule trains carrying supplies to remote villages.",
-      alt_name: "ABC image"
     },
     {
       title: "Tilicho Lake",
       image: tilichopic ,
       desc:"On this 12-day journey through Nepal, experience the scenic and challenging Tilicho Lake Trek,one of the highest lakes in the world. Start in Kathmandu to get acquainted with the country, and do some sightseeing. Then, begin the journey through the Annapurna region.",
-      alt_name: "Tilicho image"
     }
   ];
 

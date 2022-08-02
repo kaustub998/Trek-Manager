@@ -16,13 +16,11 @@ export const Package = ({details}) => {
             </>)
         })}</div>
         <div id="package_guide">
-            {details.guide.map((p)=>{
-                return(<>
-                <div id='guides_text' className='package_text'>Guides</div>
-                <span className="guide_name package_text" >{p.guide_name}</span>
-                <span className="guide_number package_text">{"Number: "+p.guide_number}</span>
-                </>)
-            })}
+    
+            <div id='guides_text' className='package_text'>Guides</div>
+            <span className="guide_name package_text" >{details.guide.guide_name}</span>
+            <span className="guide_number package_text">{"Number: "+details.guide.guide_number}</span>
+            
         </div>
     </div>
   )

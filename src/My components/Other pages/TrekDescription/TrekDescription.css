@@ -90,3 +90,48 @@
 .season_frame{
     margin-bottom: 3rem;
 }
+
+.trek_info{
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgb(245, 241, 236);
+    border-radius: 2em;
+    width: 50%;
+    box-shadow: 5px 5px 20px black;
+}
+
+.trek_info_title{
+    font-size: 1.5em;
+    color: var(--text-colour);
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    width: 200%;
+}
+
+.trek_info_desc{
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 200;
+    color: var(--text-colour);
+    font-size: 1.3em;
+    align-self: center;
+    text-align: center;
+}
+
+.facts_container{
+    display: flex;
+    border-bottom: 1px solid rgb(215, 202, 202);
+    padding: 0.5em 1em;
+}
+
+.facts{
+    font-size: 2em;
+    color: var(--title-colour);
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem;
+    padding: 1rem;
+}

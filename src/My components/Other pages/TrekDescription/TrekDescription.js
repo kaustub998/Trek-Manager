@@ -7,12 +7,17 @@ import { Transport } from './Transport'
 export const TrekDescription = () => {
   const params = useParams();
 
+
+  
   let desc = {
 
     destination: {
       title: "Annapurna Base Camp",
       description: `Annapurna Base Camp Trek probably the best legendary and classical treks in the world offers breathe stopping Mountain View, give opportunity to experience the typical Nepali village, local people and their way of living traditional life in Himalaya of Nepal. The Annapurna Base Camp route goes passing through spectacular and tranquil landscapes, charming Gurung and Magar villages, lush green Rhododendron, bamboo and alpine forests.Mt. Annapurna (8091m) of Nepal is the 10th highest mountain in the world and the journey to its base camp, which is at 4130m/13549ft height, is one of the most popular walks on earth. Moreover, we reach our destination via Mt. Machapuchhre (Fishtail) which is revered by the Nepalese for its unique beauty. Furthermore, thanks to the well-groomed itinerary of the Annapurna Base Camp trekking package, it is a popular choice among diverse outdoor enthusiasts, from a solo female traveler to hikers traveling in groups to Nepal.`,
-      pic: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/cover-for-Annapurna-Base-Camp-Trek.jpg"
+      pic: "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/cover-for-Annapurna-Base-Camp-Trek.jpg",
+      elevation:"4130",
+      difficulty:"Moderate",
+      length:"8 Days",
     }, 
 
     route:[
@@ -32,12 +37,10 @@ export const TrekDescription = () => {
             "Day 6: Bamboo to Zhinu Danda(1610m) Natural Hot Spring",
             "Day 7: Jhinu to Pokhara via Nayapul"
           ],
-          guide:[
-            {
+          guide:{
               guide_name:"Paras pujara",
               guide_number:"98625120",
-            },
-          ]
+            }
         },
       ],
       city:[
@@ -126,6 +129,22 @@ let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
             <div className="description_text">{desc.destination.description}</div>
             <div className="description_pic"><img src={desc.destination.pic} alt="abc" id='desc_carousel_pic'/></div> 
           </div> 
+          <div className="trek_info">
+            <div className="facts">Facts</div>
+            <div className="facts_container">
+              <div className='trek_info_title'> Max Elevation  </div>
+              <div className='trek_info_desc'>{desc.destination.elevation}</div>
+            </div>
+            <div className="facts_container">
+              <div className='trek_info_title'> Duration  </div>
+              <div className='trek_info_desc'>{desc.destination.length}</div>
+            </div>
+            <div className="facts_container">
+              <div className='trek_info_title'> Difficulty  </div>
+              <div className='trek_info_desc'>{desc.destination.difficulty}</div>
+            </div>
+          
+          </div>
         </div>
         <div className="route_frame">
           <div id="routes">Routes</div>

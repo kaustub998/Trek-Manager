@@ -28,7 +28,7 @@ export const Carousel = (props) => {
           <div className="carousel_slide carousel_active">
             <p className="carousel_name">{props.data[index].title}</p>
             <div className="carousel_info">
-              <img src={props.data[index].image} alt={props.data[index].alt_name} className="carousel_image"/>
+              <img src={props.data[index].image} className="carousel_image"/>
               <div className="carousel_desc">
                 {props.data[index].desc}
               </div>
