@@ -7,8 +7,6 @@ import { Transport } from './Transport'
 export const TrekDescription = () => {
   const params = useParams();
 
-
-  
   let desc = {
 
     destination: {
