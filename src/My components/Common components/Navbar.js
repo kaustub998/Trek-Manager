@@ -105,8 +105,8 @@ export const Navbar = () => {
     ${scrollPosition>= 100 ? 'opacity-100 bg-[#bec8d6e1]': `opacity-${scrollPosition} bg-inherit 
     ${scrollPosition > 10? '' : 'pointer-events-none'}` }`}>
 
-        <div className='flex items-center max-w-[200px]'>
-            <img src={img_logo} alt="logo_image" className='w-8 sm:w-12'/>
+        <div className='flex justify-center items-center max-w-[200px]'>
+            <img src={img_logo} alt="logo_image" className=' w-8 sm:w-12'/>
             <p className='text-lg sm:text-xl px-2'>Trek <br/> Manager</p>
         </div>
 
