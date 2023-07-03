@@ -1,7 +1,6 @@
 import React from 'react'
 import { ViewPoint } from './viewpoint'
 import {Accomodation} from "./accomodation"
-import "./city.css"
 
 export const City = ({city_details}) => {
   return (

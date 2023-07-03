@@ -7,5 +7,5 @@ export const suggestions = [
     "Everest Base camp",
     "Manaslu Circuit Trek",
     "Gokyo Lakes",
-    "Upper Mustang Trek"
+    "Upper Mustang Trek",
 ];

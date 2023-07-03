@@ -1,5 +1,4 @@
 import React from 'react'
-import "./accomodation.css"
 
 export const Accomodation = ({acc_desc}) => {
   return (

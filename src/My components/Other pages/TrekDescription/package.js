@@ -1,5 +1,4 @@
 import React from 'react'
-import "./package.css"
 
 export const Package = ({details}) => {
   return (

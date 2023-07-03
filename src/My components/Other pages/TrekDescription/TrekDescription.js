@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import "./TrekDescription.css"
 import {Route} from "./Route"
 import { Transport } from './Transport'
 
@@ -173,3 +172,5 @@ let searched_desc = desc.destination.title.toLocaleLowerCase().split("");
     </div>
   )
 }
+
+

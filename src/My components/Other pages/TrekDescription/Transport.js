@@ -1,5 +1,4 @@
 import React from 'react'
-import "./transport.css"
 
 export const Transport = ({medium_desc}) => {
   return (

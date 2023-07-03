@@ -1,5 +1,4 @@
 import React from 'react'
-import "./Route.css"
 import {City} from "./city"
 import { Package } from './package'
 
@@ -14,9 +13,9 @@ export const Route = ({route_details}) => {
       <div className="packages">
         Trek Packages
         <div id="package_frame">
-          {route_details.packages.map((p)=>{
+          {route_details.packages.length?route_details.packages.map((p)=>{
             return <Package details={p}/>
-          })}
+          }):console.log("cant run")}
         </div>
       </div>
       <div id="city_in_the_route">Cities in the Route</div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import "./viewpoint.css"
 
 export const ViewPoint = ({cvp_desc}) => {
   return (
