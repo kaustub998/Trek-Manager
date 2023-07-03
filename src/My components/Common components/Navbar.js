@@ -15,8 +15,6 @@ export const Navbar = () => {
         
         const position = window.scrollY;
         setScrollPosition((position/7).toFixed());
-        console.log(scrollPosition)
-        
     };
 
     const [width, setwidth] = useState(window.innerWidth);
@@ -112,8 +110,7 @@ export const Navbar = () => {
 
         <div ref={width>1200?search_ref:null} className={'hidden relative xl:flex bg-[#9eabbd] w-[500px] items-center rounded-lg bg-inherit'} >
             <FaSearch size={30} className='absolute left-4 pointer-events-none'/>
-            <input className='w-full text-xl rounded-lg placeholder-[#1D3557] bg-inherit focus:bg-[#8093ad] duration-100 
-            focus:ring-0 px-16 py-4' type="text" placeholder='Search for destinations' 
+            <input className={scrollPosition > 100? `w-full text-xl rounded-lg placeholder-[#1D3557] bg-inherit focus:bg-[#8093ad] duration-100 focus:ring-0 px-16 py-4` : 'hidden'} type="text" placeholder='Search for destinations' 
             value={search_value} onChange={search_onchange}/> 
            
             <div className={toggle_dropdown?'flex flex-col absolute top-[50px] bg-[#8093ad] w-full text-2xl text-left rounded-b-lg duration-300' : 'hidden' }> 
