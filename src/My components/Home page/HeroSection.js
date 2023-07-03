@@ -1,10 +1,13 @@
 import React from 'react'
 import hero from '../Images/hero_image.jpg'
 import picture from "../Images/lets roam nepal.png"
+import { Navbar } from '../Common components/Navbar'
+import { MidPart } from './midPart'
+import { Carousel } from './carousel'
 
 export const HeroSection = () => {
   return (
-    <div className='w-full pb-12  overflow-x-clip bg-[#f0f5f8]'> 
+    <div className='w-full   overflow-x-clip bg-[#f0f5f8]'> 
     {/* pt-[140px]  sm:pt-12 */}
       <div className='w-full'>
 
@@ -15,10 +18,12 @@ export const HeroSection = () => {
             <h1 className=''>Manager</h1>
             <p className='text-4xl font-semibold pt-[50px] border-b-4 pb-2 max-w-[500px]'>Managing Treks Ever since</p>
           </div>
-          
+
         </div>
+
+        <Navbar/>
         
-        <div className='flex flex-col-reverse text-xl md:text-3xl px-8 items-center max-w-[1000px] mx-auto '>
+        <div className='flex flex-col-reverse text-xl md:text-3xl px-8 items-center max-w-[1000px] mx-auto p-12'>
           <div>
             <p className="text-justify leading-8 md:leading-10 text-[#5b7542] mx-auto">
               Trekking in the Himalayas opens up new horizons of awareness, blending physical challenge with mental relaxation and a spiritual elation inspired by splendid scenery and heartwarming human encounters. 
@@ -35,7 +40,13 @@ export const HeroSection = () => {
 
         </div>
 
+        <MidPart/>
+        <Carousel/>
+
       </div>
+
+      
+
   </div>
   )
 }

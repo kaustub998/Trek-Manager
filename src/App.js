@@ -20,13 +20,13 @@ function App() {
   return (
     <div className='main_body'>
     <Router>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Routes>
       <Route exact path="/" element={
         <>
           <HeroSection/>
-          <MidPart/>
-          <Carousel/>
+          {/* <MidPart/> */}
+          {/* <Carousel/> */}
         </>
       }/>
       {/* <Route exact path="/About_us" element={

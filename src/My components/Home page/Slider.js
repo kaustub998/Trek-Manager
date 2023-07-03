@@ -7,7 +7,7 @@ export const Slider = ({ children : source_image, slide }) => {
 
     useEffect(() => {
         if(len > 1){
-            if(slide === true){
+            if(slide === true || window.innerWidth < 1000){
                 setTimeout(() => {
                     if(img_index===(len-1))
                         {setimg_index(0)}

@@ -14,7 +14,7 @@ export const Navbar = () => {
     const handleScroll = () => {
         
         const position = window.scrollY;
-        setScrollPosition((position/7).toFixed());
+        setScrollPosition((position/8).toFixed());
     };
 
     const [width, setwidth] = useState(window.innerWidth);
@@ -99,9 +99,9 @@ export const Navbar = () => {
     };
 
   return (
-    <div className={`w-full h-[80px] fixed  text-[#1D3557] flex justify-between items-center px-8 text-center z-50 transition-opacity duration-300 transition-bg
-    ${scrollPosition>= 100 ? 'opacity-100 bg-[#bec8d6e1]': `opacity-${scrollPosition} bg-inherit 
-    ${scrollPosition > 10? '' : 'pointer-events-none'}` }`}>
+
+    <div className={`w-full h-[80px] sticky top-0  text-[#1D3557] flex justify-between items-center px-8 text-center z-50 transition-opacity duration-300 transition-bg
+        ${scrollPosition >= 100 ? 'opacity-100 bg-[#bec8d6e1]': `bg-transparent ` }`}> 
 
         <div className='flex justify-center items-center max-w-[200px]'>
             <img src={img_logo} alt="logo_image" className=' w-8 sm:w-12'/>
@@ -110,7 +110,7 @@ export const Navbar = () => {
 
         <div ref={width>1200?search_ref:null} className={'hidden relative xl:flex bg-[#9eabbd] w-[500px] items-center rounded-lg bg-inherit'} >
             <FaSearch size={30} className='absolute left-4 pointer-events-none'/>
-            <input className={scrollPosition > 100? `w-full text-xl rounded-lg placeholder-[#1D3557] bg-inherit focus:bg-[#8093ad] duration-100 focus:ring-0 px-16 py-4` : 'hidden'} type="text" placeholder='Search for destinations' 
+            <input className={`w-full text-xl rounded-lg placeholder-[#1D3557] bg-inherit focus:bg-[#8093ad] duration-100 focus:ring-0 px-16 py-4`} type="text" placeholder='Search for destinations' 
             value={search_value} onChange={search_onchange}/> 
            
             <div className={toggle_dropdown?'flex flex-col absolute top-[50px] bg-[#8093ad] w-full text-2xl text-left rounded-b-lg duration-300' : 'hidden' }> 
@@ -162,9 +162,9 @@ export const Navbar = () => {
 
         {/* search bar for devices above sm below xl */}
         <div ref={(width>640 && width<1200)?search_ref:null} className={
-        search?'fixed top-[12%] right-[-50px] hidden sm:flex xl:hidden duration-300 z-0 bg-inherit' 
+        search? `fixed top-[12%] right-[-50px] hidden sm:flex xl:hidden duration-300 z-0 bg-inherit`
         : 'fixed top-[12%] right-[-300px] hidden sm:flex xl:hidden hover:right-[-50px] duration-300 z-0 bg-inherit'} >
-            <FaSearch size={30} className='absolute left-4 top-4 pointer-events-none'/>
+            <FaSearch size={30} className={scrollPosition >= 100 ? 'absolute left-4 top-4 pointer-events-none' : 'hidden'}/>
             <input className='w-full text-xl placeholder-[#1D3557] bg-inherit focus:bg-[#8093ad] duration-300 focus:ring-0 px-16 py-4' type="text" placeholder='Search for destinations'
             value={search_value} onChange={search_onchange}/>
             <div className={toggle_dropdown?'flex flex-col absolute top-[50px] bg-[#8093ad] w-full text-2xl text-left rounded-b-lg duration-300' : 'hidden' }> 
