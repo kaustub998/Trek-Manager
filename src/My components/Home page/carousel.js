@@ -1,15 +1,30 @@
-import React from 'react'
-import { Places } from './Places'
+import React, {lazy , Suspense} from 'react'
 
-import ABC1 from "../Images/ABC1.jpg"
-import ABC2 from "../Images/ABC2.jpg"
-import ABC3 from "../Images/ABC3.jpg"
-import ABC4 from "../Images/ABC4.jpg"
+import ABC1 from '../Images/ABC1.jpg'
+import ABC2 from '../Images/ABC2.jpg'
+import ABC3 from '../Images/ABC3.jpg'
+import ABC4 from '../Images/ABC4.jpg'
 
-import tilichopic from "../Images/Tilicho.jpg"
-import tilichopic1 from "../Images/Tilicho1.jpg"
-import tilichopic2 from "../Images/Tilicho2.jpg"
-import tilichopic3 from "../Images/Tilicho3.jpg"
+import tilichopic from '../Images/Tilicho.jpg'
+import tilichopic1 from '../Images/Tilicho1.jpg'
+import tilichopic2 from '../Images/Tilicho2.jpg'
+import tilichopic3 from '../Images/Tilicho3.jpg'
+
+// const ABC1 = lazy(() => import('../Images/ABC1.jpg'))
+// const ABC2 = lazy(() => import('../Images/ABC2.jpg'))
+// const ABC3 = lazy(() => import('../Images/ABC3.jpg'))
+// const ABC4 = lazy(() => import('../Images/ABC4.jpg'))
+
+// const tilichopic = lazy(() => import('../Images/Tilicho.jpg'))
+// const tilichopic1 = lazy(() => import('../Images/Tilicho1.jpg'))
+// const tilichopic2 = lazy(() => import('../Images/Tilicho2.jpg'))
+// const tilichopic3 = lazy(() => import('../Images/Tilicho3.jpg'))
+
+const Places = lazy(() =>
+  import("./Places").then(module => {
+    return {default : module.Places}
+  })
+)
 
 export const Carousel = (props) => {
 
@@ -29,14 +44,18 @@ export const Carousel = (props) => {
   ];
 
   return (
-    <div className='bg-[#f0f5f8] px-8 pb-8' >
+    
+      <div className='bg-[#f0f5f8] px-8 pb-8' >
 
-      <Places >
-        {treks.map((trek) => {
-          return trek
-        })}
-      </Places>
-      
-    </div>
+        <Suspense fallback = {<h2>Loading</h2>}>
+          <Places >
+            {treks.map((trek) => {
+              return trek
+            })}
+          </Places>
+        </Suspense>
+        
+      </div>
+ 
   )
 }
